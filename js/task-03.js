@@ -14,13 +14,10 @@ const images = [
 ];
 
 const makeImagesRowMarkUp = image => `<li><img src="${image.url}" alt="${image.alt}"></li>`;
-console.log(makeImagesRowMarkUp(images[1]));
 const galleryEl = document.querySelector("#gallery");
 
 const imagesRow = images
   .map(makeImagesRowMarkUp)
   .join('');
 
-
-console.log(imagesRow);
 galleryEl.insertAdjacentHTML('afterbegin', imagesRow);
